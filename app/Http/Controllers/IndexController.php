@@ -8,7 +8,12 @@ class IndexController extends Controller
 {
   public function index()
   {
-    return inertia('Index/Index');
+    return inertia(
+      'Index/Index', 
+      [
+        'message' => 'Hello there, this is a prop coming from the IndexController!'
+      ]
+    );
   }
   
   public function show()
